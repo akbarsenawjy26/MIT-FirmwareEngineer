@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 # Konfigurasi InfluxDB
 influxdb_url = "http://localhost:8086"
-influxdb_token = "7rApYAJ4k8vyzYZcqVXvsXFw7HGd-uPmTzTN1aVL9dUrQKMeQJKFhxh2mpL-2LrfvkQnE-S4wqVckFeeOxN5sQ=="
+influxdb_token = "tW-EN6DLekedgQW91Ck5mVKEHuq_surGAR9Y3xV8B_Jh965dsZbPP7Br5kzy30NlId2lyimA8KOFt8MYvqW_1w==" # Ganti dengan token
 influxdb_org = "MIT"
 influxdb_bucket = "mqtt_logging"
 
