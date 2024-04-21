@@ -23,29 +23,45 @@ Pastikan konten berikut ada di dalam `platform.ini`:
 - Buka terminal di vscode:
     - docker-compose up -d
     - Pastikan eksekusi berhasil.
-![Teks Alternatif](https://github.com/akbarsenawjy26/MIT-FirmwareEngineer/blob/main/img/back1.png)
+![Teks Alternatif](https://github.com/akbarsenawjy26/MIT-FirmwareEngineer/blob/main/img/docker1.png)
 - Buka browser dan periksa Hivemq dan InfluxDB:
 
 ### Langkah-langkah:
 
 - Buka browser dan akses Hivemq: [localhost:8080](http://localhost:8080)
+![Teks Alternatif](https://github.com/akbarsenawjy26/MIT-FirmwareEngineer/blob/main/img/docker2.png)
+
 - Buka browser dan akses InfluxDB: [localhost:8086](http://localhost:8086)
+![Teks Alternatif](https://github.com/akbarsenawjy26/MIT-FirmwareEngineer/blob/main/img/docker3.png)
+
 - Ikuti langkah-langkah berikut:
 
     - Klik "Get Started"
+![Teks Alternatif](https://github.com/akbarsenawjy26/MIT-FirmwareEngineer/blob/main/img/docker4.png)
+    
     - Isi informasi awal:
         - Nama Pengguna: `akbarsenawjy`
         - Kata Sandi: `403201aa`
         - Nama Organisasi Awal: `MIT`
         - Nama Bucket Awal: `mqtt_logging`
+![Teks Alternatif](https://github.com/akbarsenawjy26/MIT-FirmwareEngineer/blob/main/img/docker5.png)
+
     - Klik "Configure Later"
+![Teks Alternatif](https://github.com/akbarsenawjy26/MIT-FirmwareEngineer/blob/main/img/docker6.png)
+
     - Klik "Python"
+![Teks Alternatif](https://github.com/akbarsenawjy26/MIT-FirmwareEngineer/blob/main/img/docker7.png)
+
     - Klik "Get Token", dan salin token setelah `=`
+![Teks Alternatif](https://github.com/akbarsenawjy26/MIT-FirmwareEngineer/blob/main/img/docker8.png)
+
     - Tempelkan token ke dalam bidang `influxdb_token` di `api.py` dan `mqtt_middleware.py`:
       ```python
       influxdb_token = "tW-EN6DLekedgQW91Ck5mVKEHuq_surGAR9Y3xV8B_Jh965dsZbPP7Br5kzy30NlId2lyimA8KOFt8MYvqW_1w==" # Ganti dengan Token
       ```
     - Klik "Write Data", pilih `mqtt_logging` di bawah bucket
+![Teks Alternatif](https://github.com/akbarsenawjy26/MIT-FirmwareEngineer/blob/main/img/docker9.png)
+
     - Biarkan terbuka, akan dibuka kembali setelah middleware berjalan
 
 
