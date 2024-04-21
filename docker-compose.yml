@@ -21,6 +21,8 @@ services:
       - INFLUXDB_DB=mqtt_logging
       - INFLUXDB_ADMIN_USER=akbarsenawjy
       - INFLUXDB_ADMIN_PASSWORD=403201aa
+    volumes:
+      - influxdb_data:/var/lib/influxdb  # Mount a volume for InfluxDB data
     networks:
       - mqtt_network
 
@@ -48,3 +50,6 @@ services:
 networks:
   mqtt_network:
     driver: bridge
+
+volumes:
+  influxdb_data:  # Define a named volume for InfluxDB data
