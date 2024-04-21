@@ -1,0 +1,11 @@
+{
+    "name": "mqtt_influxdb_monitor",
+    "version": "1.0.0",
+    "description": "Node.js application for monitoring MQTT and InfluxDB data",
+    "main": "server.js",
+    "dependencies": {
+      "express": "^4.17.2",
+      "axios": "^0.25.0"
+    }
+  }
+  

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monitoring API Data</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .data-container {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .data-item {
+      width: calc(50% - 5px);
+      padding: 10px;
+      background-color: #f9f9f9;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease;
+    }
+
+    .data-item:hover {
+      background-color: #e9e9e9;
+    }
+
+    .data-title {
+      text-align: center;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .data-value {
+      text-align: center;
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Monitoring Data</h1>
+    
+    <div class="data-container">
+      <div class="data-item">
+        <div class="data-title">Voltage</div>
+        <div id="voltageData" class="data-value"></div>
+      </div>
+      <div class="data-item">
+        <div class="data-title">Current</div>
+        <div id="currentData" class="data-value"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    async function loadVoltageData() {
+      const response = await fetch('/api/voltage');
+      const data = await response.json();
+      const voltage = data[data.length-1]._value;
+      document.getElementById('voltageData').innerHTML = `${voltage} V`;
+    }
+
+    async function loadCurrentData() {
+      const response = await fetch('/api/current');
+      const data = await response.json();
+      const current = data[data.length-1]._value;
+      document.getElementById('currentData').innerHTML = `${current} A`;
+    }
+
+    setInterval(() => {
+      loadVoltageData();
+      loadCurrentData();
+    }, 5000);
+  </script>
+</body>
+</html>
