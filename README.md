@@ -2,6 +2,9 @@
 
 Proyek GitHub ini adalah sebuah sistem simulasi data sensor IoT yang menghasilkan nilai tegangan (225V hingga 235V) dan arus (0A hingga 105A) secara acak. Data tegangan dipublikasikan ke topik MQTT `home/sensor/voltage`, sedangkan data arus dipublikasikan ke `home/sensor/current`. Sistem ini juga berlangganan topik MQTT `home/actuator/alarmVoltage` dan `home/actuator/alarmCurrent` untuk menerima pemicu alarm berdasarkan ambang batas yang telah ditentukan. Data sensor tersimpan dalam basis data time-series (TSDB) InfluxDB, dan sistem menggunakan HiveMQ sebagai broker MQTT. Selain itu, proyek ini menyediakan Open API dengan endpoint `localhost:5000/api/voltage` untuk mengakses data tegangan dan `localhost:5000/api/current` untuk mengakses data arus, memungkinkan pengguna untuk mengambil data sensor secara programatik untuk integrasi atau analisis lebih lanjut.
 
+![Teks Alternatif](https://github.com/akbarsenawjy26/MIT-FirmwareEngineer/blob/main/img/skema%20kerja.drawio.png)
+
+
 ### 1. Persyaratan
 - Python v3
 - NodeJS v20
