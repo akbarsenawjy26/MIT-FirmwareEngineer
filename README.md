@@ -89,6 +89,8 @@ Pastikan konten berikut ada di dalam `platform.ini`:
    ```
 
 - Kembali ke InfluxDB sebelumnya dan pastikan koneksi ditemukan
+![Teks Alternatif](https://github.com/akbarsenawjy26/MIT-FirmwareEngineer/blob/main/img/mid2.png)
+
 
 ### 5. Backend
 - Jalankan di terminal:
@@ -100,6 +102,8 @@ Pastikan konten berikut ada di dalam `platform.ini`:
     ```
 
 - Akses localhost:5000/api/voltage dan localhost:5000/api/current
+![Teks Alternatif](https://github.com/akbarsenawjy26/MIT-FirmwareEngineer/blob/main/img/back1.png)
+![Teks Alternatif](https://github.com/akbarsenawjy26/MIT-FirmwareEngineer/blob/main/img/back2.png)
 
 ### 6. Frontend
 - Jalankan di terminal:
@@ -113,3 +117,4 @@ Pastikan konten berikut ada di dalam `platform.ini`:
     node server.js
     ```
 - Akses localhost:3000
+![Teks Alternatif](https://github.com/akbarsenawjy26/MIT-FirmwareEngineer/blob/main/img/front1.png)
