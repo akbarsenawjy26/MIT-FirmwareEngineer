@@ -15,7 +15,7 @@ mqtt_topic_alarm_current = "home/actuator/alarmCurrent"
 
 # Konfigurasi InfluxDB
 influxdb_url = "http://localhost:8086"
-influxdb_token = "4inUUjaMJ3VfY4gFxvaou3ru4GOAs2EYvNuw2bl8xaX64YXoKMnWS89B7qqB4NEm5sYosuapEHypRMZiE8yoMQ=="
+influxdb_token = "7rApYAJ4k8vyzYZcqVXvsXFw7HGd-uPmTzTN1aVL9dUrQKMeQJKFhxh2mpL-2LrfvkQnE-S4wqVckFeeOxN5sQ=="
 influxdb_org = "MIT"
 influxdb_bucket = "mqtt_logging"
 
