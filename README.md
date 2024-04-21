@@ -9,7 +9,7 @@ Panduan ini akan memandu Anda melalui pengaturan komponen yang diperlukan untuk 
 ### 2. Firmware
 a. Konfigurasi Platform.ini:
 Pastikan konten berikut ada di dalam `platform.ini`:
-```ini lib_deps = knolleary/PubSubClient@^2.8
+```ini lib_deps = knolleary/PubSubClient@^2.8```
 b. Konfigurasi WiFi:
 const char* ssid = "TMU"; // Ganti dengan SSID Anda
 const char* password = "BambangDjaja"; // Ganti dengan Password Anda
