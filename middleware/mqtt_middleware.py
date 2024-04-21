@@ -15,9 +15,9 @@ mqtt_topic_alarm_current = "home/actuator/alarmCurrent"
 
 # Konfigurasi InfluxDB
 influxdb_url = "http://localhost:8086"
-influxdb_token = "8CXO3_YdLA9OlZjZizziFATaO4tXzUSNRm_NvhMuTUDfdy9LK0LnX6MSrq05D7MUu01jKZBNFYDjZgtJb00qAQ=="
-influxdb_org = "WIT"
-influxdb_bucket = "mqtt-logging"
+influxdb_token = "4inUUjaMJ3VfY4gFxvaou3ru4GOAs2EYvNuw2bl8xaX64YXoKMnWS89B7qqB4NEm5sYosuapEHypRMZiE8yoMQ=="
+influxdb_org = "MIT"
+influxdb_bucket = "mqtt_logging"
 
 # Inisialisasi klien InfluxDB
 influxdb_client = InfluxDBClient(url=influxdb_url, token=influxdb_token, org=influxdb_org)
@@ -93,7 +93,7 @@ def process_current_data(payload):
 
 
 # Inisialisasi klien MQTT
-client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
+client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1)
 
 # Daftarkan fungsi callback ke klien MQTT
 client.on_connect = on_connect
