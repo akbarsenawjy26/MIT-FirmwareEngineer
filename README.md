@@ -23,7 +23,7 @@ Pastikan konten berikut ada di dalam `platform.ini`:
 - Buka terminal di vscode:
     - docker-compose up -d
     - Pastikan eksekusi berhasil.
-
+    ![Teks Alternatif](D:\MIT-FirmwareEngineer\MIT-FirmwareEngineer\img\back1.png)
 - Buka browser dan periksa Hivemq dan InfluxDB:
 
 ### Langkah-langkah:
