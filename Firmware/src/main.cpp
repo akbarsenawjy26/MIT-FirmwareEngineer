@@ -10,7 +10,7 @@ const char* ssid = "TMU"; //changes with ur SSID
 const char* password = "BambangDjaja"; //changes with ur Password
 
 // MQTT config
-const char* mqtt_server = "192.168.137.1";
+const char* mqtt_server = "192.168.137.1"; // Ganti dengan IP Localhost
 const int mqtt_port = 1883;
 const char* mqtt_topic_voltage = "home/sensor/voltage";
 const char* mqtt_topic_current = "home/sensor/current";
