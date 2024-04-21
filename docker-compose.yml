@@ -1,0 +1,50 @@
+version: '3'
+
+services:
+  hivemq:
+    image: hivemq/hivemq4
+    container_name: hivemq
+    ports:
+      - "1883:1883"  # MQTT port
+      - "8080:8080"  # Web UI port
+    environment:
+      - HIVEMQ_BIND_ADDRESS=0.0.0.0  # Bind to all network interfaces
+    networks:
+      - mqtt_network
+
+  influxdb:
+    image: influxdb:latest
+    container_name: influxdb
+    ports:
+      - "8086:8086"  # InfluxDB HTTP API port
+    environment:
+      - INFLUXDB_DB=mqtt_logging
+      - INFLUXDB_ADMIN_USER=akbarsenawjy
+      - INFLUXDB_ADMIN_PASSWORD=403201aa
+    networks:
+      - mqtt_network
+
+  nodejs_frontend:
+    image: node:lts-alpine
+    build: ./frontend  # Path to directory containing Node.js application files
+    container_name: nodejs_frontend
+    ports:
+      - "3000:3000"  # Port for Node.js application
+    depends_on:
+      - hivemq
+      - influxdb
+    networks:
+      - mqtt_network
+
+  python_backend:
+    image: python:3.9-alpine
+    container_name: python_backend
+    command: python /path/to/your_python_script.py  # Specify the command to run your Python script
+    volumes:
+      - /path/to/your_python_scripts:/scripts  # Mount your Python scripts directory into the container
+    networks:
+      - mqtt_network
+
+networks:
+  mqtt_network:
+    driver: bridge
